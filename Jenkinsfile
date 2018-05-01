@@ -8,7 +8,7 @@ pipeline {
         MY_NAME = 'CMoney'
       }
       steps {
-        echo 'Hello ${MY_NAME}!'
+        echo "Hello ${MY_NAME}!"
         sh 'java -version'
       }
     }
