@@ -4,8 +4,11 @@ pipeline {
   }
   stages {
     stage('Say Hello') {
+      environment {
+        MY_NAME = 'CMoney'
+      }
       steps {
-        echo 'Hello World!'
+        echo 'Hello ${MY_NAME}!'
         sh 'java -version'
       }
     }
