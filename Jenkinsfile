@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'jdk9'
+  }
   stages {
     stage('Hello World!') {
       parallel {
@@ -15,8 +17,5 @@ pipeline {
         }
       }
     }
-  }
-  environment {
-    jdk9 = 'jdk9'
   }
 }
